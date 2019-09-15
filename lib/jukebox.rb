@@ -64,7 +64,8 @@ end
 
 ####
 =begin
-def run(songs)
+
+def run(songs) #doesnt work because the loop exists
   puts "Please enter a command:"
   input=gets.strip
   case input
@@ -81,13 +82,13 @@ end
 =end
 
 def run(songs)
-  while true do
+  while true do #always true so loop always runs
     puts "Please enter a command:"
     response = gets.chomp
     case response
     when "exit"
       exit_jukebox
-      break
+      break #exits the loop
     when "play"
       play(songs)
     when "help"
